@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Instagram, Facebook, Twitter, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -66,27 +66,27 @@ const Footer = () => {
             <h4 className="font-display text-lg font-medium mb-6">Collections</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/collections/sarees" className="text-white/80 hover:text-primary smooth-transition">
+                <Link href="/collections/sarees" className="text-white/80 hover:text-primary smooth-transition">
                   Sarees
                 </Link>
               </li>
               <li>
-                <Link to="/collections/lehengas" className="text-white/80 hover:text-primary smooth-transition">
+                <Link href="/collections/lehengas" className="text-white/80 hover:text-primary smooth-transition">
                   Lehengas
                 </Link>
               </li>
               <li>
-                <Link to="/collections/kurtas" className="text-white/80 hover:text-primary smooth-transition">
+                <Link href="/collections/kurtas" className="text-white/80 hover:text-primary smooth-transition">
                   Kurtas
                 </Link>
               </li>
               <li>
-                <Link to="/collections/dupattas" className="text-white/80 hover:text-primary smooth-transition">
+                <Link href="/collections/dupattas" className="text-white/80 hover:text-primary smooth-transition">
                   Dupattas
                 </Link>
               </li>
               <li>
-                <Link to="/collections/festive" className="text-white/80 hover:text-primary smooth-transition">
+                <Link href="/collections/festive" className="text-white/80 hover:text-primary smooth-transition">
                   Festive Edit
                 </Link>
               </li>
@@ -98,27 +98,27 @@ const Footer = () => {
             <h4 className="font-display text-lg font-medium mb-6">Company</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/about" className="text-white/80 hover:text-primary smooth-transition">
+                <Link href="/about" className="text-white/80 hover:text-primary smooth-transition">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/story" className="text-white/80 hover:text-primary smooth-transition">
+                <Link href="/story" className="text-white/80 hover:text-primary smooth-transition">
                   Our Story
                 </Link>
               </li>
               <li>
-                <Link to="/sustainability" className="text-white/80 hover:text-primary smooth-transition">
+                <Link href="/sustainability" className="text-white/80 hover:text-primary smooth-transition">
                   Sustainability
                 </Link>
               </li>
               <li>
-                <Link to="/careers" className="text-white/80 hover:text-primary smooth-transition">
+                <Link href="/careers" className="text-white/80 hover:text-primary smooth-transition">
                   Careers
                 </Link>
               </li>
               <li>
-                <Link to="/press" className="text-white/80 hover:text-primary smooth-transition">
+                <Link href="/press" className="text-white/80 hover:text-primary smooth-transition">
                   Press
                 </Link>
               </li>
@@ -130,27 +130,27 @@ const Footer = () => {
             <h4 className="font-display text-lg font-medium mb-6">Support</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/contact" className="text-white/80 hover:text-primary smooth-transition">
+                <Link href="/contact" className="text-white/80 hover:text-primary smooth-transition">
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link to="/size-guide" className="text-white/80 hover:text-primary smooth-transition">
+                <Link href="/size-guide" className="text-white/80 hover:text-primary smooth-transition">
                   Size Guide
                 </Link>
               </li>
               <li>
-                <Link to="/shipping" className="text-white/80 hover:text-primary smooth-transition">
+                <Link href="/shipping" className="text-white/80 hover:text-primary smooth-transition">
                   Shipping Info
                 </Link>
               </li>
               <li>
-                <Link to="/returns" className="text-white/80 hover:text-primary smooth-transition">
+                <Link href="/returns" className="text-white/80 hover:text-primary smooth-transition">
                   Returns
                 </Link>
               </li>
               <li>
-                <Link to="/faq" className="text-white/80 hover:text-primary smooth-transition">
+                <Link href="/faq" className="text-white/80 hover:text-primary smooth-transition">
                   FAQ
                 </Link>
               </li>
@@ -168,13 +168,13 @@ const Footer = () => {
             </p>
             
             <div className="flex space-x-6 text-sm">
-              <Link to="/privacy" className="text-white/60 hover:text-primary smooth-transition">
+              <Link href="/privacy" className="text-white/60 hover:text-primary smooth-transition">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-white/60 hover:text-primary smooth-transition">
+              <Link href="/terms" className="text-white/60 hover:text-primary smooth-transition">
                 Terms & Conditions
               </Link>
-              <Link to="/cookies" className="text-white/60 hover:text-primary smooth-transition">
+              <Link href="/cookies" className="text-white/60 hover:text-primary smooth-transition">
                 Cookie Policy
               </Link>
             </div>

@@ -1,7 +1,8 @@
 import { Star, Quote } from "lucide-react";
-import priyaImage from "@/assets/customer-priya.jpg";
-import ananyaImage from "@/assets/customer-ananya.jpg";
-import kavyaImage from "@/assets/customer-kavya.jpg";
+import Image from "next/image";
+const priyaImage = "/customer-priya.jpg";
+const ananyaImage = "/customer-ananya.jpg";
+const kavyaImage = "/customer-kavya.jpg";
 
 const Testimonials = () => {
   const testimonials = [
@@ -59,11 +60,15 @@ const Testimonials = () => {
               
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-3">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
+                  <div className="w-12 h-12 relative">
+                    <Image
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      fill
+                      className="object-cover rounded-full"
+                      sizes="48px"
+                    />
+                  </div>
                   <div>
                     <div className="font-medium text-foreground">{testimonial.name}</div>
                     <div className="text-sm text-foreground-muted">{testimonial.location}</div>

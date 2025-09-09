@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 
@@ -38,7 +38,7 @@ const FestiveBanner = () => {
             size="lg"
             className="bg-white text-accent hover:bg-white/90 px-8 py-4 text-lg font-medium"
           >
-            <Link to="/collections/festive">Explore Festive Collection</Link>
+            <Link href="/collections/festive">Explore Festive Collection</Link>
           </Button>
           
           <Button 
@@ -47,7 +47,7 @@ const FestiveBanner = () => {
             size="lg"
             className="border-2 border-white text-white hover:bg-white hover:text-accent px-8 py-4 text-lg font-medium"
           >
-            <Link to="/gift-guide">Gift Guide</Link>
+            <Link href="/gift-guide">Gift Guide</Link>
           </Button>
         </div>
         

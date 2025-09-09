@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+"use client";
+import { useState } from "react";
 import LoadingScreen from "@/components/LoadingScreen";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
@@ -18,7 +19,7 @@ const Home = () => {
   return (
     <>
       {showLoading && <LoadingScreen onComplete={handleLoadingComplete} />}
-      
+
       {!showLoading && (
         <div className="min-h-screen">
           <Navbar />

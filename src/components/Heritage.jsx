@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import familyImage from "@/assets/family-traditional.jpg";
+import Link from "next/link";
+import Image from "next/image";
+const familyImage = "/family-traditional.jpg";
 
 const Heritage = () => {
   return (
@@ -29,7 +30,7 @@ const Heritage = () => {
             
             <div className="mt-8">
               <Button asChild variant="noorOutline" size="lg">
-                <Link to="/heritage">Read the Heritage Journal</Link>
+                <Link href="/heritage">Read the Heritage Journal</Link>
               </Button>
             </div>
           </div>
@@ -37,11 +38,13 @@ const Heritage = () => {
           {/* Image */}
           <div className="relative">
             <div className="aspect-[4/5] rounded-lg overflow-hidden elegant-shadow">
-              <img
+              <Image
                 src={familyImage}
                 alt="Indian family in traditional ethnic wear showcasing heritage"
-                className="w-full h-full object-cover"
-                loading="lazy"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority={false}
               />
             </div>
             

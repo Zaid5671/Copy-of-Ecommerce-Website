@@ -1,16 +1,15 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-saree.jpg";
+import Link from "next/link";
+import Image from "next/image";
+const heroImage = "/hero-saree.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
-        <div className="absolute inset-0 bg-classic-black/30"></div>
+      <div className="absolute inset-0">
+        <Image src={heroImage} alt="Hero" fill priority className="object-cover" />
+        <div className="absolute inset-0 bg-classic-black/30" />
       </div>
       
       {/* Mandala Glow Background */}
@@ -42,14 +41,14 @@ const HeroSection = () => {
               asChild
               className="btn-noor-primary px-8 py-3 text-lg hover-glow smooth-transition"
             >
-              <Link to="/collections">Shop Collections</Link>
+              <Link href="/collections">Shop Collections</Link>
             </Button>
             <Button 
               asChild
               variant="outline"
               className="btn-noor-outline px-8 py-3 text-lg border-white text-white hover:bg-white hover:text-classic-black"
             >
-              <Link to="/story">Learn Our Story</Link>
+              <Link href="/story">Learn Our Story</Link>
             </Button>
           </div>
         </div>

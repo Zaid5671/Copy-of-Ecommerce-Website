@@ -1,5 +1,7 @@
+"use client";
+
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Search, User, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import CartDrawer from "@/components/CartDrawer";
@@ -26,17 +28,18 @@ const Navbar = () => {
             
             {/* Left Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <Link to="/collections" className="text-foreground hover-golden smooth-transition">
+              <Link href="/collections" className="text-foreground hover-golden smooth-transition">
                 Shop
               </Link>
-              <Link to="/story" className="text-foreground hover-golden smooth-transition">
+              <Link href="/story" className="text-foreground hover-golden smooth-transition">
                 Our Story
               </Link>
             </div>
 
             {/* Center Logo */}
             <div className="flex-1 flex justify-center md:flex-none">
-              <Link to="/" className="font-noor text-2xl md:text-3xl hover-scale smooth-transition text-foreground">
+              {/* CORRECTED CLASS NAME HERE */}
+              <Link href="/" className="noor-logo text-2xl md:text-3xl hover-scale smooth-transition text-foreground">
                 NOOR
               </Link>
             </div>
@@ -44,7 +47,7 @@ const Navbar = () => {
             {/* Right Navigation */}
             <div className="flex items-center space-x-4">
               <div className="hidden md:flex items-center space-x-6">
-                <Link to="/about" className="text-foreground hover-golden smooth-transition">
+                <Link href="/about" className="text-foreground hover-golden smooth-transition">
                   About
                 </Link>
               </div>
@@ -54,7 +57,7 @@ const Navbar = () => {
                 <Search className="h-5 w-5" />
               </Button>
               <Button asChild variant="ghost" size="icon" className="hover:bg-primary/10">
-                <Link to="/login">
+                <Link href="/login">
                   <User className="h-5 w-5" />
                 </Link>
               </Button>
@@ -78,21 +81,21 @@ const Navbar = () => {
           <div className="md:hidden bg-background border-t border-border">
             <div className="px-4 py-4 space-y-4">
               <Link 
-                to="/collections" 
+                href="/collections" 
                 className="block text-foreground hover-golden smooth-transition"
                 onClick={toggleMenu}
               >
                 Shop
               </Link>
               <Link 
-                to="/story" 
+                href="/story" 
                 className="block text-foreground hover-golden smooth-transition"
                 onClick={toggleMenu}
               >
                 Our Story
               </Link>
               <Link 
-                to="/about" 
+                href="/about" 
                 className="block text-foreground hover-golden smooth-transition"
                 onClick={toggleMenu}
               >

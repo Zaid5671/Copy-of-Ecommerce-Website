@@ -1,7 +1,8 @@
+"use client";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const Story = () => {
   return (
@@ -81,49 +82,6 @@ const Story = () => {
             </div>
           </div>
 
-          {/* Sustainability */}
-          <div className="mb-16">
-            <h2 className="font-display text-3xl md:text-4xl text-foreground mb-8">
-              Sustainability & Ethics
-            </h2>
-            <div className="bg-heritage/5 rounded-lg p-8 md:p-12">
-              <p className="text-foreground-muted leading-relaxed mb-6">
-                At Noor, sustainability isn't just a buzzword—it's woven into the very fabric of 
-                our existence. We believe in slow fashion, creating pieces that are meant to be 
-                treasured for generations, not discarded after a season.
-              </p>
-              <div className="grid md:grid-cols-3 gap-6 mt-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-heritage rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl text-heritage-foreground">🌱</span>
-                  </div>
-                  <h4 className="font-display text-lg font-medium mb-2">Ethical Sourcing</h4>
-                  <p className="text-sm text-foreground-muted">
-                    All materials sourced through fair trade partnerships
-                  </p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-heritage rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl text-heritage-foreground">👥</span>
-                  </div>
-                  <h4 className="font-display text-lg font-medium mb-2">Artisan Support</h4>
-                  <p className="text-sm text-foreground-muted">
-                    Fair wages and long-term partnerships with craftspeople
-                  </p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-heritage rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl text-heritage-foreground">♻️</span>
-                  </div>
-                  <h4 className="font-display text-lg font-medium mb-2">Zero Waste</h4>
-                  <p className="text-sm text-foreground-muted">
-                    Minimal packaging and fabric waste reduction programs
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Call to Action */}
           <div className="text-center">
             <h2 className="font-display text-3xl text-foreground mb-6">
@@ -135,10 +93,10 @@ const Story = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild variant="noorPrimary" size="lg">
-                <Link to="/collections">Explore Collections</Link>
+                <Link href="/collections">Explore Collections</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link to="/sustainability">Learn About Sustainability</Link>
+                <Link href="/sustainability">Learn About Sustainability</Link>
               </Button>
             </div>
           </div>

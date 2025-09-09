@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 
 // The 'LoadingScreenProps' interface is removed for JSX compatibility.
